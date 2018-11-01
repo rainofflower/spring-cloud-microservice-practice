@@ -13,6 +13,7 @@
 		<module>microservice-movie</module>
 		<module>microservice-discovery-eureka</module>
 		<module>microservice-movie-ribbon</module>
+		<module>microservice-movie-ribbon-property</module>
 	</modules>
 
 	<properties>

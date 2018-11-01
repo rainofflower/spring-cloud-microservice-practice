@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: microservice-movie-ribbon-property
+
+server:
+  port: 8771
+  
+  
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    instance-id: localhost:${server.port}
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka/
+      
+microservice-userbase:    #负载均衡     请求用户服务
+   ribbon:
+      NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule #com.netflix.loadbalancer.WeightedResponseTimeRule
+  
