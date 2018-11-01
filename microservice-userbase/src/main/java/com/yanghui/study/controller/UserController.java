@@ -16,6 +16,7 @@ public class UserController {
 	
 	@RequestMapping("/user/{id}")
 	public User getUserById(@PathVariable Long id) {
+		System.out.println("请求命中服务------");
 		return userMapper.selectByPrimaryKey(id);
 	}
 }
