@@ -12,6 +12,7 @@
 		<module>microservice-userbase</module>
 		<module>microservice-movie</module>
 		<module>microservice-discovery-eureka</module>
+		<module>microservice-movie-ribbon</module>
 	</modules>
 
 	<properties>
