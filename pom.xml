@@ -14,6 +14,8 @@
 		<module>microservice-discovery-eureka</module>
 		<module>microservice-movie-ribbon</module>
 		<module>microservice-movie-ribbon-property</module>
+		<module>microservice-movie-ribbon-hystrix</module>
+		<module>microservice-hystrix-dashboard</module>
 	</modules>
 
 	<properties>
