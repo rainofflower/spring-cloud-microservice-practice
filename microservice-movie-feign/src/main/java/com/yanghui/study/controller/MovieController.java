@@ -1,0 +1,21 @@
+package com.yanghui.study.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.yanghui.study.entity.User;
+import com.yanghui.study.feign.UserFeignClient;
+
+@RestController
+public class MovieController {
+
+	@Autowired
+	private UserFeignClient userFeignClient;
+	
+	@GetMapping("movie/{id}")
+	public User getById(@PathVariable Long id) {
+		return this.userFeignClient.getUser(id);
+	}
+}
