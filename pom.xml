@@ -18,6 +18,7 @@
 		<module>microservice-movie-ribbon-hystrix2</module>
 		<module>microservice-hystrix-dashboard</module>
 		<module>microservice-turbine</module>
+		<module>microservice-movie-feign</module>
 	</modules>
 
 	<properties>
