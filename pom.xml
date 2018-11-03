@@ -15,7 +15,9 @@
 		<module>microservice-movie-ribbon</module>
 		<module>microservice-movie-ribbon-property</module>
 		<module>microservice-movie-ribbon-hystrix</module>
+		<module>microservice-movie-ribbon-hystrix2</module>
 		<module>microservice-hystrix-dashboard</module>
+		<module>microservice-turbine</module>
 	</modules>
 
 	<properties>

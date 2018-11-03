@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: microservice-turbine
+
+server:
+  port: 8005
+
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    instance-id: localhost:${server.port}
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka/
+      
+turbine:
+  aggregator:
+    cluster-config: default
+    #- MICROSERVICE-MOVIE-RIBBON-HYSTRIX
+  app-config: microservice-movie-ribbon-hystrix,microservice-movie-ribbon-hystrix2
+  cluster-name-expression: "'default'"

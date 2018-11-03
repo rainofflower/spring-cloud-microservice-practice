@@ -1,9 +1,9 @@
 spring:
   application:
-    name: microservice-movie-ribbon-hystrix
+    name: microservice-movie-ribbon-hystrix2
 
 server:
-  port: 8768
+  port: 8790
   
   
 eureka:
