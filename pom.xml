@@ -19,6 +19,8 @@
 		<module>microservice-hystrix-dashboard</module>
 		<module>microservice-turbine</module>
 		<module>microservice-movie-feign</module>
+		<module>microservice-movie-feign-overriding</module>
+		<module>microservice-movie-feign-hystrix</module>
 	</modules>
 
 	<properties>
