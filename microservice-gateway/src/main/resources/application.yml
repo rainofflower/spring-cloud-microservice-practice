@@ -8,10 +8,19 @@ spring:
       - id: user-base
         uri: lb://microservice-userbase  #lb 前缀是load balance的缩写,后面跟着服务名可实现ribbon(feign)的负载均衡
         predicates:
-        - Path=/user/list      
+        - Path=/user/yaya/**  #路由映射路径    结合StripPrefix使用是为了路由多项目时将项目区分开来，如果配置path=/** 后面配置的路由将会无效，因为/**会将所有请求拦截
+        filters:
+        - StripPrefix=2   #strip除去，剥去 ;strip prefix除去前缀; 数字表示除去浏览器请求url前缀里的级数
+        
+      - id: movie-feign
+        uri: lb://microservice-movie-feign-hystrix
+        predicates:
+        - Path=/lala/hello/**
+        filters:
+        - StripPrefix=2   
     
 server:
-  port: 8888
+  port: 8882
   
 eureka:
   instance:
