@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: microservice-gateway
+    
+  cloud:
+    gateway:
+      routes:
+      - id: user-base
+        uri: lb://microservice-userbase  #lb 前缀是load balance的缩写,后面跟着服务名可实现ribbon(feign)的负载均衡
+        predicates:
+        - Path=/user/list      
+    
+server:
+  port: 8888
+  
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    instance-id: localhost:${server.port}
+    lease-renewal-interval-in-seconds: 10
+    lease-expiration-duration-in-seconds: 30
+  client:
+    healthcheck:
+      enabled: true
+    service-url:
+      default-zone: http://localhost:8761/eureka/
+      
+hystrix.command.fallbackcmd.execution.isolation.thread.timeoutInMilliseconds: 5000  #hystrix超时调用fallback方法
