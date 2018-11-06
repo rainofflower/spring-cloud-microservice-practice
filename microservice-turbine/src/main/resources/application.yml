@@ -18,5 +18,5 @@ turbine:
   aggregator:
     cluster-config: default
     #- MICROSERVICE-MOVIE-RIBBON-HYSTRIX
-  app-config: microservice-movie-ribbon-hystrix,microservice-movie-ribbon-hystrix2
+  app-config: microservice-movie-ribbon-hystrix,microservice-movie-ribbon-hystrix2,microservice-movie-feign-hystrix
   cluster-name-expression: "'default'"
