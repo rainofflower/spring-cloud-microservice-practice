@@ -17,4 +17,7 @@ public interface UserFeignClient {
 	
 	@RequestMapping(value="/user/list",method = RequestMethod.GET)
 	public List<User> listUser();
+
+	@RequestMapping(value="/user/test-timeout",method = RequestMethod.GET)
+	public String testTimeOut();
 }

@@ -30,4 +30,15 @@ public class UserController {
 	public List<User> listUser(){
 		return userMapper.selectAll();
 	}
+	
+	@RequestMapping("/user/test-timeout")
+	public String testTimeOut() {
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return "请求成功哦";
+	}
 }

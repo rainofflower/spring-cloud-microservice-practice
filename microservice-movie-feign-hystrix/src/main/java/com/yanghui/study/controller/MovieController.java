@@ -16,13 +16,18 @@ public class MovieController {
 	@Autowired
 	private UserFeignClient userFeignClient;
 	
-	@GetMapping("movie/{id}")
+	@GetMapping("/movie/{id}")
 	public User getById(@PathVariable Long id) {
 		return this.userFeignClient.getUser(id);
 	}
 	
-	@GetMapping("movie/list-user")
+	@GetMapping("/movie/list-user")
 	public List<User> listUser(){
 		return this.userFeignClient.listUser();
+	}
+	
+	@GetMapping("/movie/test-timeout")
+	public String testTimeOut() {
+		return userFeignClient.testTimeOut();
 	}
 }

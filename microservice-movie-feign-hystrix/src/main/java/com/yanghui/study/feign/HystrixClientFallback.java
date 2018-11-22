@@ -31,5 +31,10 @@ public class HystrixClientFallback implements UserFeignClient{
 		return list;
 	}
 
+	@Override
+	public String testTimeOut() {
+		return "请求超时啦";
+	}
+
 	
 }
