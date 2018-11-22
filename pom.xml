@@ -22,6 +22,7 @@
 		<module>microservice-movie-feign-overriding</module>
 		<module>microservice-movie-feign-hystrix</module>
 		<module>microservice-gateway</module>
+		<module>microservice-userbase-multidatasource</module>
 	</modules>
 
 	<properties>
