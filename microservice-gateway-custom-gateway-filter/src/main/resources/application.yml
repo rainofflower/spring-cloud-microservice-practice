@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: microservice-gateway-custom-gateway-filter
+    
+  cloud:
+    gateway:
+      routes:
+      - id: user-base
+        uri: lb://microservice-userbase
+        predicates:
+        - Path=/yaya/**
+        filters:
+        - StripPrefix=1
+        
+      - id: movie-feign
+        uri: lb://microservice-movie-feign-hystrix
+        predicates:
+        - Path=/lala/**
+        filters:
+        - Pre=true
+        - StripPrefix=1
+
+server:
+  port: 8883
+  
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    instance-id: localhost:${server.port}
+    lease-renewal-interval-in-seconds: 10
+    lease-expiration-duration-in-seconds: 30
+  client:
+    healthcheck:
+      enabled: true
+    service-url:
+      default-zone: http://localhost:8761/eureka/

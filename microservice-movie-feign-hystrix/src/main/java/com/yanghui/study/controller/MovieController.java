@@ -30,4 +30,9 @@ public class MovieController {
 	public String testTimeOut() {
 		return userFeignClient.testTimeOut();
 	}
+
+	@GetMapping("/movie/test")
+	public String test() {
+		return "哈哈";
+	}
 }

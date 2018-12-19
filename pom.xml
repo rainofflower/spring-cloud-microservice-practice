@@ -23,6 +23,7 @@
 		<module>microservice-movie-feign-hystrix</module>
 		<module>microservice-gateway</module>
 		<module>microservice-userbase-multidatasource</module>
+		<module>microservice-gateway-custom-gateway-filter</module>
 	</modules>
 
 	<properties>
