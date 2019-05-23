@@ -1,47 +1,25 @@
 package com.yanghui.study.config;
 
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.After;
+
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
-import org.aspectj.lang.annotation.Pointcut;
-import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 @Aspect
-@Order(-1)
 @Component
 public class DynamicDataSourceAspect {
 
-	/**
-	 * 定义localhost数据源切点表达式
-	 * execution(public int com.yanghui.aop.MathCalculator.*(..))
-	 * com.yanghui.study.service.jsis
-	 */
-	@Pointcut("execution(* com.yanghui.study.service.localhost..*(..))")
-	public void localhostJointPoint() {
+
+	@Before("@annotation(targetDataSource)")
+	public void before(TargetDataSource targetDataSource) {
+		String name = targetDataSource.value();
+		DynamicDataSourceContextHolder.set(name);
 	}
 
-	/**
-	 * 设置localhost数据源
-	 */
-	@Before("localhostJointPoint()")
-	public void setLocalhostJointPointDataSource(JoinPoint point) {
-		DynamicDataSourceContextHolder.set(DataSourceKey.LOCALHOST);
+	@After("@annotation(TargetDataSource)")
+	public void after(){
+		DynamicDataSourceContextHolder.clear();
 	}
-
-	/**
-	 * 定义jsis数据源切点表达式
-	 */
-	@Pointcut("execution(* com.yanghui.study.service.jsis..*(..))")
-	public void jsisJointPoint() {
-	}
-
-	/**
-	 * 设置jsis数据源
-	 */
-	@Before("jsisJointPoint()")
-	public void setJsisDataSource(JoinPoint point) {
-		DynamicDataSourceContextHolder.set(DataSourceKey.JSIS);
-	}
-
 }

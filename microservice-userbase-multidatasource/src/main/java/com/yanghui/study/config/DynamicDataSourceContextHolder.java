@@ -2,13 +2,13 @@ package com.yanghui.study.config;
 
 public class DynamicDataSourceContextHolder {
 
-    private static final ThreadLocal<DataSourceKey> currentDatesource = new ThreadLocal<>();
+    private static final ThreadLocal<String> CURRENT = new ThreadLocal<>();
 
     /**
      * 清除当前数据源
      */
     public static void clear() {
-        currentDatesource.remove();
+        CURRENT.remove();
     }
 
     /**
@@ -16,8 +16,8 @@ public class DynamicDataSourceContextHolder {
      *
      * @return 当前使用数据源的ID
      */
-    public static DataSourceKey get() {
-        return currentDatesource.get();
+    public static String get() {
+        return CURRENT.get();
     }
 
     /**
@@ -25,7 +25,7 @@ public class DynamicDataSourceContextHolder {
      *
      * @param value 需要设置的数据源ID
      */
-    public static void set(DataSourceKey value) {
-        currentDatesource.set(value);
+    public static void set(String value) {
+        CURRENT.set(value);
     }
 }

@@ -1,39 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.yanghui.study.mapper.ParkMapper">
-  <resultMap id="BaseResultMap" type="com.yanghui.study.entity.Park">
-    <id column="id" jdbcType="BIGINT" property="id" />
-    <result column="code" jdbcType="VARCHAR" property="code" />
-    <result column="name" jdbcType="VARCHAR" property="name" />
-    <result column="parent_id" jdbcType="BIGINT" property="parentId" />
-    <result column="full_path" jdbcType="VARCHAR" property="fullPath" />
-    <result column="org_id" jdbcType="INTEGER" property="orgId" />
-    <result column="org_code" jdbcType="CHAR" property="orgCode" />
-    <result column="org_name" jdbcType="VARCHAR" property="orgName" />
-    <result column="partitions" jdbcType="VARCHAR" property="partitions" />
-    <result column="city_id" jdbcType="INTEGER" property="cityId" />
-    <result column="city_code" jdbcType="VARCHAR" property="cityCode" />
-    <result column="city_name" jdbcType="VARCHAR" property="cityName" />
-    <result column="subsystem_id" jdbcType="BIGINT" property="subsystemId" />
-    <result column="subsystem_code" jdbcType="CHAR" property="subsystemCode" />
-    <result column="subsystem_name" jdbcType="VARCHAR" property="subsystemName" />
-    <result column="total_space" jdbcType="INTEGER" property="totalSpace" />
-    <result column="month_space" jdbcType="INTEGER" property="monthSpace" />
-    <result column="temp_space" jdbcType="INTEGER" property="tempSpace" />
-    <result column="charge_mode" jdbcType="TINYINT" property="chargeMode" />
-    <result column="allow_edit" jdbcType="TINYINT" property="allowEdit" />
-    <result column="item_id" jdbcType="VARCHAR" property="itemId" />
-    <result column="status" jdbcType="TINYINT" property="status" />
-    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
-    <result column="create_by" jdbcType="VARCHAR" property="createBy" />
-    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
-    <result column="update_by" jdbcType="VARCHAR" property="updateBy" />
-    <result column="remark" jdbcType="VARCHAR" property="remark" />
-  </resultMap>
-  <sql id="Base_Column_List">
-    id, code, name, parent_id, full_path, org_id, org_code, org_name, partitions, city_id, 
-    city_code, city_name, subsystem_id, subsystem_code, subsystem_name, total_space, 
-    month_space, temp_space, charge_mode, allow_edit, item_id, status, create_time, create_by, 
-    update_time, update_by, remark
-  </sql>
+
 </mapper>

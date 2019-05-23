@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.yanghui.study.entity.Park;
-import com.yanghui.study.service.jsis.ParkService;
+import com.yanghui.study.service.ParkService;
 
 @RestController
 public class ParkController {
