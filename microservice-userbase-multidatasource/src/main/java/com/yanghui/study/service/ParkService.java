@@ -1,6 +1,6 @@
 package com.yanghui.study.service;
 
-import com.yanghui.study.config.TargetDataSource;
+import com.yanghui.study.config.database.TargetDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

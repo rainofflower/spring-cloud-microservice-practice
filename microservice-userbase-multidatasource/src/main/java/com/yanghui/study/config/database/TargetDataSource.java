@@ -1,4 +1,4 @@
-package com.yanghui.study.config;
+package com.yanghui.study.config.database;
 
 import java.lang.annotation.*;
 

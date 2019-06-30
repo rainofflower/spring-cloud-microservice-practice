@@ -1,7 +1,7 @@
 package com.yanghui.study.service;
 
-import com.yanghui.study.config.DynamicDataSourceContextHolder;
-import com.yanghui.study.config.TargetDataSource;
+import com.yanghui.study.config.database.DynamicDataSourceContextHolder;
+import com.yanghui.study.config.database.TargetDataSource;
 import com.yanghui.study.entity.Message;
 import com.yanghui.study.mapper.MessageMapper;
 import org.springframework.beans.factory.annotation.Autowired;

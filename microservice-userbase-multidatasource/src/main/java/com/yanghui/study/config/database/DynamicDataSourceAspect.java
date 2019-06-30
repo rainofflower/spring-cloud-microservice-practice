@@ -1,6 +1,5 @@
-package com.yanghui.study.config;
+package com.yanghui.study.config.database;
 
-import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
 
 import org.aspectj.lang.annotation.Aspect;
@@ -18,7 +17,7 @@ public class DynamicDataSourceAspect {
 		DynamicDataSourceContextHolder.set(name);
 	}
 
-	@After("@annotation(TargetDataSource)")
+	@After("@annotation(com.yanghui.study.config.database.TargetDataSource)")
 	public void after(){
 		DynamicDataSourceContextHolder.clear();
 	}

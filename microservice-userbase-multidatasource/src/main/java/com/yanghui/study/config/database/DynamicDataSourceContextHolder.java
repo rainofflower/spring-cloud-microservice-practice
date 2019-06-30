@@ -1,4 +1,4 @@
-package com.yanghui.study.config;
+package com.yanghui.study.config.database;
 
 public class DynamicDataSourceContextHolder {
 

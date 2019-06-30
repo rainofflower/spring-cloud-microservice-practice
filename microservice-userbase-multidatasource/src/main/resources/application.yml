@@ -60,6 +60,14 @@ spring:
       testOnReturn: false
       poolPreparedStatements: true
       maxOpenPreparedStatements: 20
+
+  lettuce:
+    pool:
+      max-active: 20
+      max-idle: 10
+      min-idle: 0
+
+
 #mybatis:
 #  mapper-locations:
 #  - classpath*:mapper/**/*.xml
