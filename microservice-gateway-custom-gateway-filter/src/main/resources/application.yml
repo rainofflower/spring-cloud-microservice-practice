@@ -1,6 +1,6 @@
 spring:
   application:
-    name: microservice-gateway-custom-gateway-filter
+    name: microservice-gateway-custom-gateway-intercept
     
   cloud:
     gateway:
